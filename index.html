@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>EMI Calculator</title>
+  <link rel="stylesheet" href="./rk.css">
+
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h1 style="color: black">EMI Calculator</h1>
+		<button>
+			<i class="bi bi-list"></i>
+		</button>
+	</div>
+	<div class="sub-container">
+		<div class="view">
+			<div class="details">
+				<div>
+					<div class="detail">
+						<p style="color:black">Amount</p>
+						<p id="loan-amt-text" style="color:black"> RS</p>
+					</div>
+					<input type="range" id="loan-amount" min="0" max="10000000" step="5000">
+				</div>
+				<div>
+					
+					<div class="detail">
+						<p style="color:black">Length</p>
+						<p id="loan-period-text" style="color:black"></p>
+					</div>
+					<input type="range" id="loan-period" min="1" max="30" step="1">
+				</div>
+				<div>
+					<div class="detail">
+						<p style="color:black">% Interest</p>
+						<p id="interest-rate-text" style="color: black"></p>
+					</div>
+					<input type="range" id="interest-rate" min="1" max="15" step="0.5">
+				</div>
+			</div>
+			<div class="footer">
+				<p id="price-container"><span id="price">0</span>/mo</p>
+			</div>
+		</div>
+		<div class="breakup">
+			<canvas id="pieChart"></canvas>
+		</div>
+	</div>
+	<div>
+		<div class="loan-details">
+			<div class='chart-details'>
+				<p style="color:black">Principal</p>
+				<p id="cp" style="color:black; font-size: 17px;"></p>
+			</div>
+			<div class='chart-details'>
+				<p style="color: black">Interest</p>
+				<p id="ci" style="color:black; font-size: 17px;"></p>
+			</div>
+			<div class='chart-details'>
+				<p style="color: black">Total Payable</p>
+				<p id="ct" style="color: black; font-size: 17px;"></p>
+			</div>
+		</div>
+		<canvas id="lineChart" height="200px" width="200px" style="color: black;"></canvas>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js">
+  
+</script>
+<!-- partial -->
+  <script  src="./rk.js"></script>
+
+</body>
+</html>
